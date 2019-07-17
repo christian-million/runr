@@ -1,0 +1,93 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# runr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of runr is to make working with running data easier. 
+
+## Installation
+
+You can install the development version of runr from [Github](https://github.com/christian-million/runr) with:
+
+``` r
+# install.packages("remotes")
+
+remotes::install_github("christian-million/runr")
+```
+
+## Example
+
+To see how I used these functions to prepare for the 2019 California International Marathon, check out [my blog posts](https://christianmillion.com/post/running/cim-2019-prep/).
+
+```{r load}
+# Load the package
+library(runr)
+```
+
+Let's say I am preparing to run a marathon, and I want to see how fast I would need to run to hit my goals. First, let's set some goals:
+
+```{r set_goals}
+ # Setting Goals for Exemplary Purposes
+ goal_dist <- 26.2       # Marathon distance in miles
+ 
+ goal_pace <- "08:01"    # Pace in minutes per mile
+
+ goal_time <- "03:30:00" # Total time in hours, minutes, and seconds.
+```
+
+```{r calc}
+ calc_time(goal_dist, goal_pace) # See below section for why runr isn't perfectly precise right now.
+ calc_pace(goal_dist, goal_time)
+ calc_dist(goal_time, goal_pace)
+```
+
+Now that I know my goal time, let's see how long into the race I should be at during each mile.
+
+```{r calc_splits}
+ calc_splits(goal_dist, goal_time)
+```
+
+We haven't formally told any of these functions that I am counting miles and not kilometers. I'm just more used to minute-per-mile pacing. But what if I wanted to know what my marathon training stats in kilometers?
+
+```{r km_stats}
+goal_dist_km <- mi_to_km(goal_dist) # A wrapper around `convert_dist()`
+  
+goal_pace_km <- convert_pace(goal_pace, from = "mi", to = "km")
+
+goal_dist_km
+goal_pace_km
+```
+
+## Current State and Future Plans
+
+Currently, `runr` is not very precise due to the amount of rounding errors. The rounding errors were a quick fix for pretty printing.
+For now, this is okay, though I would eventually prefer it to be even more precise. 
+
+Currently `runr` really only has functionality to plan theoretical runs. In the future, I am hoping
+that it will work with real-world running data.
+
+There are dependencies on `stringr` and `lubridate`. 
+
+  - The only reason that `stringr` is a dependency is because of `stringr::str_pad`. I tried some alternatives, like `sprintf()`, but depending on my inputs I kept getting errors. I'm hoping to remove the `stringr` dependency, as it seems unnecessary. I'll keep working on a pad function that I am happy with.
+  
+  - I am okay with the `lubridate` dependency, even though the functions used could be replaced with base functions, because in the future I imagine there will be more need to rely on it. If not, though, I'll practice base r by creating base equivalents.
+
+## Feedback and Issues
+
+I'm trying to become more familiar with Github's collaboration tools, so feel free to submit an issue or pull request.
+
+Any and all feedback is welcome.

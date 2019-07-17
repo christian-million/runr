@@ -1,0 +1,9 @@
+^runr\.Rproj$
+^\.Rproj\.user$
+^create_runr\.R$
+^data-raw$
+^README\.Rmd$
+^LICENSE\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

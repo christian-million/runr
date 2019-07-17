@@ -1,0 +1,19 @@
+Package: runr
+Title: Functions for Runners
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Christian",
+           family = "Million",
+           role = c("aut", "cre"),
+           email = "christianmillion93@gmail.com")
+Description: Provides functions and data to make analyzing
+    running data easier.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/christian-million/runr
+BugReports: https://github.com/christian-million/runr/issues
+Imports: 
+    lubridate,
+    stringr
+RoxygenNote: 6.1.1

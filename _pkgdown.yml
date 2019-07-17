@@ -1,0 +1,19 @@
+destination: docs
+
+reference:
+- title: Calculate
+  desc: Calculate common running measures
+  contents:
+  - starts_with("calc_")
+- title: Time
+  desc: Switch between seconds and time
+  contents:
+  - '`sec_to_time`'
+  - '`time_to_sec`'
+- title: Convert
+  desc: Convert measures between different units
+  contents:
+  - starts_with("convert_")
+  - '`mi_to_km`'
+  - '`km_to_mi`'
+
