@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • runr</title>
+<title>Helper Function — df_rbind • runr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Helper Function — df_rbind" />
+
+<meta property="og:description" content="Helper Function" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -94,117 +97,28 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Helper Function</h1>
+    <small class="dont-index">Source: <a href='https://github.com/christian-million/runr/blob/master/R/stravapi.R'><code>R/stravapi.R</code></a></small>
+    <div class="hidden name"><code>df_rbind.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Helper Function</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>df_rbind</span>(<span class='no'>x</span>, <span class='no'>y</span>)</pre>
+        
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-calculate" class="hasAnchor"><a href="#section-calculate" class="anchor"></a>Calculate</h2>
-          <p class="section-desc"><p>Calculate common running measures</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="calc.html">calc_pace()</a></code> <code><a href="calc.html">calc_splits()</a></code> <code><a href="calc.html">calc_time()</a></code> <code><a href="calc.html">calc_dist()</a></code> </p>
-        </td>
-        <td><p>Calculate Pace, Time, Distance, and Splits</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-time" class="hasAnchor"><a href="#section-time" class="anchor"></a>Time</h2>
-          <p class="section-desc"><p>Switch between seconds and time</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="time.html">time_to_sec()</a></code> <code><a href="time.html">sec_to_time()</a></code> </p>
-        </td>
-        <td><p>Switch between time (hh:mm:ss) and seconds</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-convert" class="hasAnchor"><a href="#section-convert" class="anchor"></a>Convert</h2>
-          <p class="section-desc"><p>Convert measures between different units</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="convert.html">convert_dist()</a></code> <code><a href="convert.html">mi_to_km()</a></code> <code><a href="convert.html">km_to_mi()</a></code> <code><a href="convert.html">convert_pace()</a></code> </p>
-        </td>
-        <td><p>Converts distance and pace units to and from different metrics</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-strava-api" class="hasAnchor"><a href="#section-strava-api" class="anchor"></a>Strava API</h2>
-          <p class="section-desc"><p>Functions to get running data from Strava</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="stravapi.html">stravapi()</a></code> </p>
-        </td>
-        <td><p>Calls the Strava API</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="create_token.html">create_token()</a></code> </p>
-        </td>
-        <td><p>Create Strava API Token</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_runs.html">get_runs()</a></code> </p>
-        </td>
-        <td><p>Get Runs by Dates</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_run_ids.html">get_run_ids()</a></code> </p>
-        </td>
-        <td><p>Get Run ID's by Date</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="act_to_df.html">act_to_df()</a></code> </p>
-        </td>
-        <td><p>Convert Strava API return to data.frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="df_rbind.html">df_rbind()</a></code> </p>
-        </td>
-        <td><p>Helper Function</p></td>
-      </tr>
-    </tbody>
-    </table>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-calculate">Calculate</a></li>
-      <li><a href="#section-time">Time</a></li>
-      <li><a href="#section-convert">Convert</a></li>
-      <li><a href="#section-strava-api">Strava API</a></li>
-    </ul>
+                </ul>
+
   </div>
 </div>
 

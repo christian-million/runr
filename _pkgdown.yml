@@ -16,4 +16,13 @@ reference:
   - starts_with("convert_")
   - '`mi_to_km`'
   - '`km_to_mi`'
+- title: Strava API
+  desc: Functions to get running data from Strava
+  contents:
+  - '`stravapi`'
+  - '`create_token`'
+  - '`get_runs`'
+  - '`get_run_ids`'
+  - '`act_to_df`'
+  - '`df_rbind`'
 

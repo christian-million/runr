@@ -29,10 +29,12 @@ usethis::use_mit_license("Christian Million")
 usethis::use_r("calc")      # For calculating things like pace, distance, splits, and time
 usethis::use_r("convert")   # Convert between different measurements (mi, km, mi/min, km/min)
 usethis::use_r("time")      # convert to seconds / format.
+usethis::use_r("stravapi")  # strava API get functions
 
 # Add dependencies
 usethis::use_package("lubridate")
 usethis::use_package("stringr")
+usethis::use_package("httr")
 
 # Document my functions by adding #', @params, and @export then:
 devtools::document()
